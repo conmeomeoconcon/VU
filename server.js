@@ -6,7 +6,7 @@
 var express = require("express");
 var app = express();
 var helmet = require("helmet");
-helmet.hidePoweredBy('X-Powered-By')
+helmet.hidePoweredBy('X-Powered-By: Express');
 var fs = require("fs");
 var path = require("path");
 
@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers":
       "Origin, X-Requested-With, content-type, Accept",
   });
-helmet.hidePoweredBy('X-Powered-By');
+app.use(helmet.hidePoweredBy('X-Powered-By: Express'));
   next();
 });
 
