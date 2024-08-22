@@ -4,7 +4,7 @@
 	"description": "fcc backend boilerplate",
 	"main": "server.js",
 	"scripts": {
-		"start": "node myApp.js"
+		"start": "node --watch myApp.js"
 	},
 	"dependencies": {
 		"express": "^4.14.0",
